@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>スカイノーツ チャットパレット生成器</title>
+    <link href="skynotes_cp_maker.css" rel="stylesheet" type="text/css">
+    
+  </head>
+<body>
+
+
+    <div class="content">
+    <div class="sidebar">
+        <ul>
+	　　<h1>スカイノーツ <br>チャットパレット生成器</h1>
+            <li><a href="sky.html">スカイノーツ チャパレ生成機</a></li>
+        </ul>
+    </div>
+
+    <div class="left">
+		<h3>技能</h3>
+        <table>
+            <tr>
+                <th>技能名</th>
+                <th>得意</th>
+                <th>苦手</th>
+            </tr>
+            <tr>
+                <td>技術</td>
+                <td><input type="checkbox" id="technology_strong" name="technology_strong"/></td>
+                <td><input type="checkbox" id="technology_weak" name="technology_weak"/></td>
+            </tr>
+            <tr>
+                <td>感覚</td>
+                <td><input type="checkbox" id="sense_strong" name="sense_strong"/></td>
+                <td><input type="checkbox" id="sense_weak" name="sense_weak"/></td>
+            </tr>
+            <tr>
+                <td>教養</td>
+                <td><input type="checkbox" id="culture_strong" name="culture_strong"/></td>
+                <td><input type="checkbox" id="culture_weak" name="culture_weak"/></td>
+            </tr>
+            <tr>
+                <td>身体</td>
+                <td><input type="checkbox" id="body_strong" name="body_strong"/></td>
+                <td><input type="checkbox" id="body_weak" name="body_weak"/></td>
+            </tr>
+        </table>
+        		<h3>設備系パーツ</h3>
+        <table>
+            <tr>
+                <th>パーツ名(設備)</th>
+                <th>取得チェック</th>
+
+            </tr>
+            <tr>
+                <td>作業台</td>
+                <td><input type="checkbox" id="workbench" name="workbench"/></td>
+            </tr>
+            <tr>
+                <td>ペリスコープ</td>
+                <td><input type="checkbox" id="periscope" name="periscope"/></td>
+            </tr>
+            <tr>
+                <td>電探</td>
+                <td><input type="checkbox" id="radar" name="radar"/></td>
+            </tr>
+            <tr>
+                <td>操舵室A</td>
+                <td><input type="checkbox" id="pilothouseA" name="pilothouseA"/></td>
+            </tr>
+            <tr>
+                <td>操舵室B</td>
+                <td><input type="checkbox" id="pilothouseB" name="pilothouseB"/></td>
+            </tr>
+            <tr>
+                <td>コックピット</td>
+                <td><input type="checkbox" id="cockpit" name="cockpit"/></td>
+            </tr>
+            <tr>
+                <td>弾薬庫</td>
+                <td><input type="checkbox" id="powder_magazine" name="powder_magazine"/></td>
+            </tr>
+        </table>
+        </br>
+        </br>
+        <button class="make_Chatpallet" type="button" onclick="myFunction()">チャパレ生成</button>
+        </br>
+        </br>
+        <textarea id="chatpallet" name="chatpallet" rows="15" cols="33">ここにチャットパレットが生成されます
+		</textarea>
+
+
+    </div>
+    <div class="right">
+    		<h3>飛空士スキル</h3>
+        <table>
+            <tr>
+            	<th>飛空士スキル</th>
+                <th>取得チェック</th>
+                
+            </tr>
+            <tr>
+                <td>弾道学</td>
+                <td><input type="checkbox" id="ballistics" name="ballistics"/></td>
+            </tr>
+            <tr>
+                <td>回避運動</td>
+                <td><input type="checkbox" id="avoidance" name="avoidance"/></td>
+            </tr>
+        </table>
+        		<h3>武装系パーツ</h3>
+        <table>
+            <tr>
+            	<th>パーツ(武装)</th>
+                <th>取得チェック</th>
+                
+            </tr>
+            <tr>
+                <td>カノン砲</td>
+                <td><input type="checkbox" id="cannon" name="cannon"/></td>
+            </tr>
+            <tr>
+                <td>カルバリン砲</td>
+                <td><input type="checkbox" id="calvaline" name="calvaline"/></td>
+            </tr>
+            <tr>
+                <td>ファルコネット砲</td>
+                <td><input type="checkbox" id="falconet" name="falconet"/></td>
+            </tr>
+            <tr>
+                <td>ラピッド砲</td>
+                <td><input type="checkbox" id="rapid" name="rapid"/></td>
+            </tr>
+            <tr>
+                <td>カロネード砲</td>
+                <td><input type="checkbox" id="carronade" name="carronade"/></td>
+            </tr>
+            <tr>
+                <td>リボー砲</td>
+                <td><input type="checkbox" id="ribeau" name="ribeau"/></td>
+            </tr>
+            <tr>
+                <td>殺人光線</td>
+                <td><input type="checkbox" id="death_ray" name="death_ray"/></td>
+            </tr>
+            <tr>
+                <td>火炎放射器</td>
+                <td><input type="checkbox" id="pyroclastic" name="pyroclastic"/></td>
+            </tr>
+            <tr>
+                <td>ロケット魚雷</td>
+                <td><input type="checkbox" id="torpedo" name="torpedo"/></td>
+            </tr>
+            <tr>
+                <td>アンカー</td>
+                <td><input type="checkbox" id="anchor" name="anchor"/></td>
+            </tr>
+            <tr>
+                <td>バリスタ</td>
+                <td><input type="checkbox" id="varistor" name="varistor"/></td>
+            </tr>
+            <tr>
+                <td>突撃衝角</td>
+                <td><input type="checkbox" id="ram" name="ram"/></td>
+            </tr>
+            <tr>
+                <td>吶喊槍</td>
+                <td><input type="checkbox" id="spear" name="spear"/></td>
+            </tr>
+            <tr>
+                <td>月世界旅行砲</td>
+                <td><input type="checkbox" id="moon_voyage" name="moon_voyage"/></td>
+            </tr>
+        </table>
+        本ツールは「著：中西詠介」「冒険企画局」「KADOKAWA」が権利を有する</br>
+        「蒸気と冒険の飛空艇TRPG 歯車の塔の探空士／黒煙の軌跡」の二次創作物です。</br>
+        (C)中西詠介</br>
+        (C)Adventure Plannning Service 2021</br>
+        (C)Rokujoma Phantasm Space 2021</br>
+    </div>
+</div>
+<script src="sky.js"></script>
+</body>
+</html>
