@@ -61,7 +61,6 @@ html, body {
     height: 100%;
     margin: 0;
     display: grid;
-   
 }
 
 .sidebar {
@@ -71,6 +70,8 @@ html, body {
 }
 
 .main-content {
-    grid-template-columns:　750px 4fr;
+
+  width: 100%; /* または適切な幅を設定 */
+  max-width: 1200px; /* 必要に応じて最大幅を設定 */
     background-color: #ffffff; /* 背景色を設定（任意） */
 }
