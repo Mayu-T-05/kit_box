@@ -61,14 +61,16 @@ html, body {
     height: 100%;
     margin: 0;
     display: grid;
-    grid-template-columns: 250px 1fr; /* サイドバーとメインコンテンツの幅を設定 */
+   
 }
 
 .sidebar {
+    grid-template-columns: 250px 1fr;  /* サイドバーとメインコンテンツの幅を設定 */
     height: 100%;
     background-color: #f0f0f0; /* 背景色を設定（任意） */
 }
 
 .main-content {
+    grid-template-columns: 4fr;
     background-color: #ffffff; /* 背景色を設定（任意） */
 }
