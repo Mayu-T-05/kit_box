@@ -1,5 +1,5 @@
 .accordion {
-    max-width: 250px;
+    max-width: 230px;
     margin-bottom: 7px;
     border: 2px solid #d0d0d0;
     border-radius: 5px;
@@ -55,4 +55,20 @@
 .accordion[open] p {
     transform: none;
     opacity: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 250px 1fr; /* サイドバーとメインコンテンツの幅を設定 */
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #f0f0f0; /* 背景色を設定（任意） */
+}
+
+.main-content {
+    background-color: #ffffff; /* 背景色を設定（任意） */
 }
