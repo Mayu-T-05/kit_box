@@ -95,7 +95,7 @@
       </tr>
       <tr>
         <td>DB</td>
-        <td><input type="number" id="db1" name="db1">d<input type="number" id="db2" name="db2">+<input type="number" id="db3" name="db3"></td>
+        <td><input type="number" id="db1" name="db1"　size="3">d<input type="number" id="db2" name="db2" size="3">+<input type="number" id="db3" name="db3" size="3"></td>
       </tr>
       <tr>
         <td>アイデア</td>
@@ -156,12 +156,70 @@
     </table>
 
     <div class="right">
+	<h3>オプション</h3>
+		<table>
+		    <tr>
+			<td>カラーコード</td>
+		    	<td><input type="text" id="color" name="color"></td>
+		    </tr>
+		　　<tr>
+			<td>アイコン画像URL</td>
+		    	<td><input type="url" id="icon" name="icon" title="ココフォリアにアップロードした画像の画像リンクを入力してください"></td>
+		    </tr>
+	    
+	    <table>
+		    <tr>
+			<th>差分URL</th>
+		    	<th>差分名</th>
+		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url1" name="diff_url1" placeholder="https://storage.ccfolia-cdn.net/users/hogehoge/files/hogehoge" title="ココフォリアにアップロードした画像の画像リンクを入力してください"></td>
+        		<td><input type="number" id="diff_name1" name="diff_name1" placeholder="@笑顔" title="@(アットマーク)は半角で入力してください"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url2" name="diff_url2"></td>
+        		<td><input type="text" id="diff_name2" name="diff_name2"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url3" name="diff_url3"></td>
+        		<td><input type="text" id="diff_name3" name="diff_name3"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url4" name="diff_url4"></td>
+        		<td><input type="text" id="diff_name4" name="diff_name4"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url5" name="diff_url5"></td>
+        		<td><input type="text" id="diff_name5" name="diff_name5"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url6" name="diff_url6"></td>
+        		<td><input type="text" id="diff_name6" name="diff_name6"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url7" name="diff_url7"></td>
+        		<td><input type="text" id="diff_name7" name="diff_name7"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url8" name="diff_url8"></td>
+        		<td><input type="text" id="diff_name8" name="diff_name8"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url9" name="diff_url9"></td>
+        		<td><input type="text" id="diff_name9" name="diff_name9"></td>
+      		    </tr>
+		    <tr>
+        		<td><input type="url" id="diff_url10" name="diff_url10"></td>
+        		<td><input type="text" id="diff_name10" name="diff_name10"></td>
+      		    </tr>
+	    </table>
+	
       <textarea id="chatpallet" name="chatpallet" rows="15" cols="33">ここに駒が出力されます。全文コピーしてココフォリアに張り付けてください。</textarea>
-
+	<br>
       <button class="make_enemy" type="button" onclick="makeEnemy()">エネミー駒生成</button>
       <button class="copy" type="button" onclick="copyEnemy()">エネミー駒生成</button>
     </div>
-
+	
   
   </div>
 </body>
