@@ -60,18 +60,19 @@
 html, body {
     height: 100%;
     margin: 0;
-    display: grid;
+    display: flex;
+  flex-direction: row;
 }
 
 .sidebar {
-    grid-template-columns: 250px 1fr;  /* サイドバーとメインコンテンツの幅を設定 */
+    flex: 1; /* サイドバーとメインコンテンツの幅を設定 */
     height: 100%;
     background-color: #f0f0f0; /* 背景色を設定（任意） */
 }
 
 .main-content {
 
-  width: 80%; /* または適切な幅を設定 */
-  max-width: 1200px; /* 必要に応じて最大幅を設定 */
+
+  flex: 4;
     background-color: #ffffff; /* 背景色を設定（任意） */
 }
