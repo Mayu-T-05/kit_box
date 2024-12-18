@@ -71,6 +71,6 @@ html, body {
 }
 
 .main-content {
-    grid-template-columns: 4fr;
+    grid-template-columns:　750px 4fr;
     background-color: #ffffff; /* 背景色を設定（任意） */
 }
