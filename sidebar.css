@@ -71,7 +71,7 @@ html, body {
 
 .main-content {
 
-  width: 100%; /* または適切な幅を設定 */
+  width: 80%; /* または適切な幅を設定 */
   max-width: 1200px; /* 必要に応じて最大幅を設定 */
     background-color: #ffffff; /* 背景色を設定（任意） */
 }
