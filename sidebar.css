@@ -72,7 +72,7 @@ html, body {
 
 .main-content {
 
-
-  flex: 4;
+    padding : 20px ;
+      flex: 4;
     background-color: #ffffff; /* 背景色を設定（任意） */
 }
