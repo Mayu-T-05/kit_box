@@ -52,7 +52,7 @@
 //-----------------------------------------------------------------------
 ///エネミーデータ作成
   function makeEnemy(){
-      var enemydata ='{
+      var enemydata ={
                         kind: "character";
                       	  data: {
                       	  name: document.getElementById('enemy_name').value;
@@ -75,7 +75,7 @@
                       	  faces: makeIcons();
                       	  color: document.getElementById('color').value;
                       	  commands: makeCommands();
-                      	}'
+                      	}
       document.getElementById('enemydata').value = enemydata;
   }
 
