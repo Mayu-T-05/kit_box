@@ -74,7 +74,7 @@
 //クリップボードにコピー
 function copyEnemy() {
     const input_text = document.getElementById("enemydata");
-    navigator.clipboard.writeText(input_text.value).then(function() {
+    navigator.clipboard.writeText(input_text).then(function() {
         // コピー成功時の処理
         alert("コピー成功");
     }).catch(function(error) {
