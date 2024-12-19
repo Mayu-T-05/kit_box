@@ -134,3 +134,7 @@ caption {
     color: #2589d0;
     font-size: 1em;
 }
+
+#db1,#db2,#db3{
+    width: 20
+}
