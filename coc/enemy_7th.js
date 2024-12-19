@@ -38,7 +38,7 @@ function calculateMov() {
     var siz = parseInt(document.getElementById('siz_score').value,10);
     var str = parseInt(document.getElementById('str_score').value,10);
 
-    if (siz>str && siz>dex)) {
+    if (siz>str && siz>dex) {
         document.getElementById('mov_score').value = 7;
     } else {
         document.getElementById('mov_score').value = 8;
