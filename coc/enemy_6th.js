@@ -11,20 +11,15 @@
         document.getElementById('hp_score').value = ''; // 片方が空白の場合はHPを空にする
     }
   }
-//MP・SAN
-  function calculateSanMp() {  
+//MP・SAN・幸運
+  function calculateSanMpLuck() {  
     var mp = document.getElementById('pow_score').value;
     var san = mp * 5
     document.getElementById('mp_score').value = mp;
     document.getElementById('san_score').value = san;
+    document.getElementById('luck').value = san;
   }
 
-//幸運
-  function calculateLuck() {
-      var powScore = document.getElementById('pow_score').value;
-      var luck = intScore * 5; 
-      document.getElementById('luck').value = luck;
-  }
 
   //知識
   function calculateKnouladge() {
