@@ -2,10 +2,10 @@
 //HP
   function calculateHp() {  
     var con = document.getElementById('con_score').value;
-    var siz = document.getElementById('size_score').value;
+    var siz = document.getElementById('siz_score').value;
 
     if (!isNaN(conScore) && !isNaN(sizScore)) { //conとsizが入力された時だけ計算する
-        var hp = Math.ceil((con + size) / 2); // HPはCONとSIZの平均値
+        var hp = Math.ceil((con + siz) / 2); // HPはCONとSIZの平均値
         document.getElementById('hp_score').value = hp;
     } else {
         document.getElementById('hp_score').value = ''; // 片方が空白の場合はHPを空にする
