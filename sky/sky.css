@@ -78,15 +78,13 @@
 
 .left {
     grid-area: left;
-    flex-direction: column;
 }
 .middle {
     grid-area: middle;
-    flex-direction: column;
 }
 .right {
     grid-area: right;
-    flex-direction: column;
+    text-align: left;
 }
 
 
