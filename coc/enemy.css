@@ -124,7 +124,7 @@ caption {
     padding: 10px;
 }
 
-#make_enemy,#copy {
+.make_enemy,.copy {
     display: flex;
     justify-content: center;
     align-items: center;
