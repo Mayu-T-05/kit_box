@@ -58,39 +58,37 @@
 }
 
 .content {
-    display: flex;
-    flex-wrap: nowrap; /* wrapをnowrapに変更 */
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 10px; /* 表の間にスペースを追加 */
-    width: 100%
-    gap: 1em; /* gapを1emに設定 */
+    display: grid;
+    grid-template-areas: 
+        "sidebar title title title"
+        "sidebar left middle right";
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: 10px;
+    width: 100%;
 }
 
 .sidebar {
-    flex: 1; /* 1:1:1:2の1 */
-    align-self: auto;
+    grid-area: sidebar;
+}
+
+.title {
+    grid-area: title;
+    text-align: left; /* タイトルを中央揃え */
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .left {
-    flex: 1; /* 1:1:1:2の1 */
-    display: flex;
-    flex-direction: column;
+    grid-area: left;
 }
 
 .middle {
-    flex: 1; /* 1:1:1:2の1 */
-    display: flex;
-    flex-direction: column;
+    grid-area: middle;
 }
 
 .right {
-    flex: 2; /* 1:1:1:2の2 */
-    display: flex;
-    flex-direction: column;
+    grid-area: right;
 }
-
 table {
     border-collapse: collapse;
     border: 2px solid rgb(200, 200, 200);
