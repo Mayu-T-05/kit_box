@@ -387,3 +387,17 @@ function addDamage(weapon) {
     chatpallet += "AVO@2 【回避運動（命中マスを1つ下に）】\nAVO@4 【回避運動（命中マスを1つ左に）】\nAVO@6 【回避運動（命中マスを1つ右に）】\nAVO@8 【回避運動（命中マスを1つ上に）】\n"
   }
 }
+
+
+
+// クリップボードにコピー
+function copy() {
+    const input_text = document.getElementById("chatpallet").value;
+    navigator.clipboard.writeText(input_text).then(function() {
+        // コピー成功時の処理
+        alert("コピー成功");
+    }).catch(function(error) {
+        // コピー失敗時の処理
+        alert("コピーに失敗しました: " + error);
+    });
+}
