@@ -64,6 +64,7 @@
     align-items: flex-start;
     align-content: flex-start;
     gap: 10px; /* 表の間にスペースを追加 */
+    width: 100%
 }
 
 .sidebar {
