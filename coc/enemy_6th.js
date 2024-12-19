@@ -24,7 +24,7 @@
   //知識
   function calculateKnouladge() {
       var eduScore = document.getElementById('edu_score').value;
-      var knowledge = intScore * 5; 
+      var knowledge = eduScore * 5; 
       document.getElementById('knowledge').value = knowledge;
   }
 
