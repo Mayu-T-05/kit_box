@@ -1,11 +1,15 @@
-//ステータス作成
+///ステータス用データ作成
 //HP
   function calculateHp() {  
     var con = document.getElementById('con_score').value;
     var siz = document.getElementById('size_score').value;
-    var hitpoint = (con + siz) / 2;
-    hitpoint = Math.ceil(hitpoint);
-    document.getElementById('hp_score').value = hitpoint;
+
+    if (!isNaN(conScore) && !isNaN(sizScore)) { //conとsizが入力された時だけ計算する
+        var hp = Math.ceil((con + size) / 2); // HPはCONとSIZの平均値
+        document.getElementById('hp_score').value = hp;
+    } else {
+        document.getElementById('hp_score').value = ''; // 片方が空白の場合はHPを空にする
+    }
   }
 //MP・SAN
   function calculateSanMp() {  
@@ -37,5 +41,30 @@
   }
 
 //ダメージ
+  function calculateDb() {
+      var db1 = document.getElementById('db1').value;
+      var db2 = document.getElementById('db1').value;
+      var db3 = document.getElementById('db1').value;
+      var db = db1 + "d" + db2 + "+" + db3; 
+      return db
+  }
 
-//技能作成
+//Json用ステータス作成
+  function makeParameter() {
+    var param = {params:[{ label: "STR", value: document.getElementById('str_score').value },{label:"CON",value:document.getElementById('con_score').value},{label:"POW",value:document.getElementById('pow_score').value},{label:"DEX",value:document.getElementById('dex_score').value},{label:"APP",value:document.getElementById('app_score').value},{label:"SIZ",value:document.getElementById('siz_score').value},{label:"INT",value:document.getElementById('int_score').value},{label:"EDU",value:document.getElementById('edu_score').value}]}
+    return param;
+  }
+
+///技能作成
+  function makeAbility(){
+    //差分用
+    for
+
+    
+    //技能用
+    
+    //ダメージ用
+    
+    //ステータス用
+
+  }
