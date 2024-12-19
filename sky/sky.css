@@ -60,9 +60,9 @@
 .content {
     display: grid;
     grid-template-areas: 
-        "sidebar title title"
-        "sidebar left right";
-    grid-template-columns: 1fr 1fr  2fr;
+        "sidebar title title title"
+        "sidebar left middle right";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
     width: 100%;
 }
@@ -82,7 +82,10 @@
     grid-area: left;
     flex-direction: column;
 }
-
+.middle {
+    grid-area: left;
+    flex-direction: column;
+}
 .right {
     grid-area: right;
     flex-direction: column;
