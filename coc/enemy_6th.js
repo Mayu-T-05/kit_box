@@ -67,3 +67,12 @@
     //ステータス用
 
   }
+
+
+
+
+//クリップボードにコピー
+function copyEnemy(){
+  const input_text = document.getElementById("chatpallet");
+  navigator.clipboard.writeText(input_text.value);
+}
