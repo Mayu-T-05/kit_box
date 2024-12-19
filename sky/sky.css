@@ -80,6 +80,7 @@
 
 .left {
     grid-area: left;
+    flex-direction: column;
 }
 
 .right {
@@ -87,12 +88,7 @@
     flex-direction: column;
 }
 
-.right {
-    display: flex;
-    flex: 2 auto;
-    align-self: auto;
-    flex-direction: column;
-}
+
 
 table {
     border-collapse: collapse;
