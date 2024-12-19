@@ -53,7 +53,7 @@
 ///技能作成
   function makeAbility(){
     //差分用
-    for
+
 
     
     //技能用
