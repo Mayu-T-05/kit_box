@@ -58,23 +58,32 @@
 }
 
 .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 10px; /* 表の間にスペースを追加 */
+    display: grid;
+    grid-template-areas: 
+        "sidebar title title"
+        "sidebar left right";
+    grid-template-columns: 1fr 1fr  2fr;
+    gap: 10px;
+    width: 100%;
 }
 
 .sidebar {
-    flex: 1 auto;
-    align-self: auto;
+    grid-area: sidebar;
+}
+
+.title {
+    grid-area: title;
+    text-align: left; /* タイトルを中央揃え */
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .left {
-    display: flex;
-    flex: 2 auto;
-    align-self: auto;
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
     flex-direction: column;
 }
 
