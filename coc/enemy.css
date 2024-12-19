@@ -59,7 +59,7 @@
 
 .content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* wrapをnowrapに変更 */
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
@@ -67,28 +67,24 @@
 }
 
 .sidebar {
-    flex: 1 auto;
-    align-self: auto;
+    flex: 1; /* 1:1:1:2の1 */
 }
 
 .left {
+    flex: 1; /* 1:1:1:2の1 */
     display: flex;
-    flex: 1 auto;
-    align-self: auto;
     flex-direction: column;
 }
 
 .middle {
+    flex: 1; /* 1:1:1:2の1 */
     display: flex;
-    flex: 1 auto;
-    align-self: auto;
     flex-direction: column;
 }
 
 .right {
+    flex: 2; /* 1:1:1:2の2 */
     display: flex;
-    flex: 2 auto;
-    align-self: auto;
     flex-direction: column;
 }
 
