@@ -56,7 +56,7 @@
         <td>STR
         </td>
         <td>
-        <input type="number" id="str_score" name="str_score">
+        <input type="number" id="str_score" name="str_score" oninput="calculateMov()">
         </td>
       </tr>
       <tr>
@@ -77,7 +77,7 @@
         <td>DEX
         </td>
         <td>
-        <input type="number" id="dex_score" name="dex_score">
+        <input type="number" id="dex_score" name="dex_score" oninput="calculateMov()">
         </td>
       </tr>
       <tr>
@@ -91,7 +91,7 @@
         <td>SIZ
         </td>
         <td>
-        <input type="number" id="siz_score" name="siz_score" oninput="calculateHp()">
+        <input type="number" id="siz_score" name="siz_score" oninput="calculateHp()"  oninput="calculateMov()">
         </td>
       </tr>
       <tr>
