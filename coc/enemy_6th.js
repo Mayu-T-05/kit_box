@@ -40,7 +40,11 @@
       var db1 = document.getElementById('db1').value;
       var db2 = document.getElementById('db1').value;
       var db3 = document.getElementById('db1').value;
-      var db = db1 + "d" + db2 + "+" + db3; 
+      var db =""
+    if(db1=0){
+      db =""
+    }else{
+      db = "+" + db1 + "d" + db2 + "+" + db3; }
       return db
   }
 
