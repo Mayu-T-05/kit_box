@@ -109,7 +109,7 @@ function makeCommands() {
     var ch = 'CCB<=';
     var command = "";
     let elements = document.getElementsByName('check_type');
-    if (elements.item(2).checked) {
+    if (elements.item(1).checked) {
         ch = 'CC<=';
     }
 
