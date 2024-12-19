@@ -46,7 +46,7 @@
 
 //Json用ステータス作成
   function makeParameter() {
-    var param = {params:[{ label: "STR", value: document.getElementById('str_score').value },{label:"CON",value:document.getElementById('con_score').value},{label:"POW",value:document.getElementById('pow_score').value},{label:"DEX",value:document.getElementById('dex_score').value},{label:"APP",value:document.getElementById('app_score').value},{label:"SIZ",value:document.getElementById('siz_score').value},{label:"INT",value:document.getElementById('int_score').value},{label:"EDU",value:document.getElementById('edu_score').value}]}
+    var param = [{ label: "STR", value: document.getElementById('str_score').value },{label:"CON",value:document.getElementById('con_score').value},{label:"POW",value:document.getElementById('pow_score').value},{label:"DEX",value:document.getElementById('dex_score').value},{label:"APP",value:document.getElementById('app_score').value},{label:"SIZ",value:document.getElementById('siz_score').value},{label:"INT",value:document.getElementById('int_score').value},{label:"EDU",value:document.getElementById('edu_score').value}]
     return param;
   }
 
