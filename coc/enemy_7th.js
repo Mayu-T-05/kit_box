@@ -80,6 +80,10 @@ function makeEnemy() {
                 label: "SAN",
                 value: document.getElementById('san_score').value,
                 max: document.getElementById('san_score').value
+            }, {
+                label: "幸運",
+                value: document.getElementById('luck').value,
+                max: document.getElementById('luck').value
             }],
             params: makeParameter(),
             iconUrl: document.getElementById('icon').value,
