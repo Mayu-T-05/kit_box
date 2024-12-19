@@ -41,11 +41,11 @@ function calculateDb() {
     var db2 = document.getElementById('db2').value;
     var db3 = document.getElementById('db3').value;
     var db = "";
-    if (db1 == 0) {
+    if (!db1 && !db3) {
         db = "";
-    } else {
-        db = "+" + db1 + "d" + db2 + "+" + db3;
-    }
+    } else if (!db1 && db3) {
+        db = "+" + db3;
+    }else{db = "+" + db1 + "d" + db2 + "+" + db3;}
     return db;
 }
 
