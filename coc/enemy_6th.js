@@ -1,8 +1,8 @@
 // ステータス用データ作成
 // HP
 function calculateHp() {  
-    var con = parseInt(document.getElementById('con_score').value);
-    var siz = parseInt(document.getElementById('siz_score').value);
+    var con = parseInt(document.getElementById('con_score').value,10);
+    var siz = parseInt(document.getElementById('siz_score').value,10);
 
     if (!isNaN(con) && !isNaN(siz)) { // conとsizが入力された時だけ計算する
         var hp = Math.ceil((con + siz) / 2); // HPはCONとSIZの平均値
@@ -14,7 +14,7 @@ function calculateHp() {
 
 // MP・SAN・幸運
 function calculateSanMpLuck() {  
-    var mp = parseInt(document.getElementById('pow_score').value);
+    var mp = parseInt(document.getElementById('pow_score').value,10);
     var san = mp * 5;
     document.getElementById('mp_score').value = mp;
     document.getElementById('san_score').value = san;
@@ -23,14 +23,14 @@ function calculateSanMpLuck() {
 
 // 知識
 function calculateKnouladge() {
-    var eduScore = parseInt(document.getElementById('edu_score').value);
+    var eduScore = parseInt(document.getElementById('edu_score').value,10);
     var knowledge = eduScore * 5; 
     document.getElementById('knowledge').value = knowledge;
 }
 
 // アイデア
 function calculateIdea() {
-    var intScore = parseInt(document.getElementById('int_score').value);
+    var intScore = parseInt(document.getElementById('int_score').value,10);
     var idea = intScore * 5; 
     document.getElementById('idea').value = idea;
 }
