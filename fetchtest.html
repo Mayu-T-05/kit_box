@@ -11,30 +11,34 @@
   <div id="data"></div>
   <script>
     document.getElementById('fetchButton').addEventListener('click', () => {
-      const url = document.getElementById('urlInput').value;
-      fetch(url)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          const contentType = response.headers.get("content-type");
-          if (contentType && contentType.indexOf("application/json") !== -1) {
-            return response.json();
-          } else {
-            return response.text(); // HTMLなどのテキストデータを返す
-          }
-        })
-        .then(data => {
-          if (typeof data === 'object') {
-            document.getElementById('data').textContent = JSON.stringify(data, null, 2);
-          } else {
-            document.getElementById('data').innerHTML = data; // HTMLを表示
-          }
-        })
-        .catch(error => {
-          console.error('There has been a problem with your fetch operation:', error);
-        });
-    });
+  const url = document.getElementById('urlInput').value;
+  fetch(url, {
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const contentType = response.headers.get("content-type");
+    if (contentType && contentType.indexOf("application/json") !== -1) {
+      return response.json();
+    } else {
+      return response.text(); // HTMLなどのテキストデータを返す
+    }
+  })
+  .then(data => {
+    if (typeof data === 'object') {
+      document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+    } else {
+      document.getElementById('data').innerHTML = data; // HTMLを表示
+    }
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+  });
+});
   </script>
 </body>
 </html>
