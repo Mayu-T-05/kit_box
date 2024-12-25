@@ -24,8 +24,10 @@
     const contentType = response.headers.get("content-type");
     if (contentType && contentType.indexOf("application/json") !== -1) {
       return response.json();
+      console.log(response.json())
     } else {
       return response.text(); // HTMLなどのテキストデータを返す
+      console.log(response.text())
     }
   })
   .then(data => {
@@ -39,6 +41,7 @@
     console.error('There has been a problem with your fetch operation:', error);
   });
 });
+    
   </script>
 </body>
 </html>
