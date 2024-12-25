@@ -17,10 +17,19 @@
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
-          return response.json();
+          const contentType = response.headers.get("content-type");
+          if (contentType && contentType.indexOf("application/json") !== -1) {
+            return response.json();
+          } else {
+            return response.text(); // HTMLなどのテキストデータを返す
+          }
         })
         .then(data => {
-          document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+          if (typeof data === 'object') {
+            document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+          } else {
+            document.getElementById('data').innerHTML = data; // HTMLを表示
+          }
         })
         .catch(error => {
           console.error('There has been a problem with your fetch operation:', error);
